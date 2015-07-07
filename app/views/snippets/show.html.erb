@@ -1,0 +1,31 @@
+<h1>Snippet</h1>
+
+<p>
+  <strong>Language:</strong>
+  <%= @snippet.language.titleize %>
+</p>
+<div class="code_block">
+  <% if @snippet.highlighted_code.present? %>
+    <%= raw @snippet.highlighted_code %>
+  <% else %>
+    <pre><%= @snippet.plain_code %></pre>
+  <% end %>
+</div>
+
+<p>
+  <strong>Created at</strong>
+  <%= @snippet.created_at %>
+  <strong>by</strong>
+  <%= @snippet.created_by %>
+</p>
+
+<p>
+  <strong>Updated at</strong>
+  <%= @snippet.updated_at %>
+  <strong>by</strong>
+  <%= @snippet.updated_by %>
+</p>
+
+<p>
+  <%= link_to "New Snippet", new_snippet_path %>
+</p>
