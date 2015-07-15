@@ -1,11 +1,11 @@
 # Test #1: Sidekiq on a separate server
 
-Repository link to my article: http://blog.nicolas-brousse.fr/articles/2015-07-15-test-1--sidekiq-on-separate-servers/
+Repository linked to my blog article: http://blog.nicolas-brousse.fr/articles/2015-07-15-test-1--sidekiq-on-separate-servers/
 
 
 ## Requirements
 
-To use try this application you only need:
+To use this application you only need:
 
 * [Vagrant](http://www.vagrantup.com/downloads.html)
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
@@ -15,6 +15,14 @@ To use try this application you only need:
 
 You could configure the instances by updating the vars who are on the top of `Vagrantfile`.
 
+```ruby
+...
+$worker_num_instances = 2
+$worker_memory = 768
+$web_memory = 768
+...
+```
+
 Then just do this two lines:
 
 ```sh
@@ -22,9 +30,10 @@ $ cd /path/to/the/project
 $ vagrant up
 ```
 
-And you can access with [`10.10.150.10:3000`](http://10.10.150.10:3000/).
+Wait some minutes that vagrant configure the VMs (it could take a while).
+Then you can access the web application with [`10.10.150.10:3000`](http://10.10.150.10:3000/).
 
-You also have access to the Sidekiq dashboard with [`10.10.150.10:3000/sidekiq`](http://10.10.150.10:3000/sidekiq).
+To access the Sidekiq dashboard go to [`10.10.150.10:3000/sidekiq`](http://10.10.150.10:3000/sidekiq).
 
 
 ## Resources

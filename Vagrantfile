@@ -1,9 +1,11 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# Configuration
 $worker_num_instances = 2
 $worker_memory = 768
 $web_memory = 768
+# End configuration
 
 VAGRANTFILE_API_VERSION = "2"
 
