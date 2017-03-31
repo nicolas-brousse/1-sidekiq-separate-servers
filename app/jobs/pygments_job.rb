@@ -1,3 +1,5 @@
+require 'net/http'
+
 class PygmentsJob < ActiveJob::Base
   queue_as :default
 

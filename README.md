@@ -1,3 +1,8 @@
+# Alternative Branch
+
+Create two Rails apps and one worker
+
+
 # Test #1: Sidekiq on a separate server
 
 Repository linked to my blog article: http://blog.nicolas-brousse.fr/articles/2015-07-15-test-1--sidekiq-on-separate-servers/
